@@ -66,12 +66,149 @@ Color picker styles
 /* --------- end color picker styles --------- */
 :root {
     /*color palette from mural image*/
-    --mural-purple: rgb (72, 44, 129);
-    --mural-blue: rgb (94, 160, 218);
-    --mural-plum: rgb (231, 161, 232);
-    --mural-pink: rgb (255, 56, 129);
+    --mural-purple: rgb(72, 44, 129);
+    --mural-blue: rgb(94, 160, 218);
+    --mural-plum: rgb(231, 161, 232);
+    --mural-pink: rgb(255, 56, 129);
 
     /*off white and black*/
-    --black: rgb (7, 3, 9);
-    --white: rgb (255, 247, 245);
+    --black: rgb(7, 3, 9);
+    --white: rgb(255, 247, 245);
+}
+
+html {
+    background-color: var(--white);
+}
+
+
+
+
+
+/*Header and nav styling*/
+header {
+    background-image: url(../img/mural.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 170%;
+    background-attachment: fixed;
+
+    width: 100%;
+    height: 300px;
+}
+
+nav li {
+    display: inline-block;
+    list-style-type: none;
+    list-style-image: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+/*END header and nav styling*/
+
+
+
+
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+
+
+
+
+/*Default image styling.*/
+img {
+    width: 100%;
+    height: auto;
+
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/*Other image styling*/
+img.gallery-img {
+    display: inline-block;
+    max-width: 300px;
+}
+
+img.left {
+    max-width: 50%;
+    margin: 0 1rem 0 0;
+}
+
+img.right {
+    max-width: 50%;
+    margin: 0 0 0 1rem;
+}
+/*END image styling.*/
+
+
+
+
+
+.content-box {
+    display: flow-root;
+    min-height: fit-content;
+    object-fit: contain;
+}
+
+
+
+
+hr {
+    border-top: 2px solid black;
+    margin: 1rem auto;
+}
+
+
+
+
+
+
+
+/*footer styling*/
+footer li {
+    list-style-type: none;
+    list-style-image: none;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+#copyright {
+    float: right;
+    --black: rgb(7, 3, 9);
+    --white: rgb(255, 247, 245);
+}
+
+body {
+    font-size: 1em;
+}
+
+#slogan {
+    background-image: linear-gradient(rgba(7, 3, 9, 0.786), rgba(231, 161, 232, 0.657), rgba(72, 44, 129, 0.901)),
+    url(../img/slogan.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#slogan h1{
+    color: var(--white);
+    text-shadow: 2px 3px 6px var(--mural-blue);
 }
