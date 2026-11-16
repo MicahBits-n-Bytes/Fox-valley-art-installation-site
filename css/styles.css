@@ -11,6 +11,10 @@
     --mural-blue: rgb(94, 160, 218);
     --mural-plum: rgb(231, 161, 232);
     --mural-pink: rgb(255, 56, 129);
+    --mural-purple: rgb(72, 44, 129);
+    --mural-blue: rgb(94, 160, 218);
+    --mural-plum: rgb(231, 161, 232);
+    --mural-pink: rgb(255, 56, 129);
 
     /*off white and black*/
     --black: rgb(7, 3, 9);
@@ -126,4 +130,30 @@ footer a {
 
 #copyright {
     float: right;
+    --black: rgb(7, 3, 9);
+    --white: rgb(255, 247, 245);
+}
+
+body {
+    font-size: 1em;
+}
+
+#slogan {
+    background-image: linear-gradient(rgba(7, 3, 9, 0.786), rgba(231, 161, 232, 0.657), rgba(72, 44, 129, 0.901)),
+    url(../img/slogan.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#slogan h1{
+    color: var(--white);
+    text-shadow: 2px 3px 6px var(--mural-blue);
 }
