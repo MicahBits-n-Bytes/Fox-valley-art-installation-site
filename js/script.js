@@ -1,0 +1,4 @@
+addColorBtn = document.getElementById("addColorBtn");
+
+
+

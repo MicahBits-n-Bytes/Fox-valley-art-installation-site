@@ -4,3 +4,9 @@
     margin: 0;
     padding: 0;
 }
+
+textarea{
+    display:block;
+    width:80%;
+    height: 20vw;
+}

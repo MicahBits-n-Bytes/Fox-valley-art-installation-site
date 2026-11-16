@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Suggest an installation | FVAI</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+    <header></header>
+    <nav></nav>
+
+    <main>
+        <section>
+            <form>
+                <fieldset>
+                    <legend>Suggest An Installation</legend>
+
+                    <label for="userFirstName">Your First Name:</label>
+                    <input name="userFirstName" id="userFirstName" placeholder="Jane" type="text">
+
+                    <label for="userLastName">Your Last Name:</label>
+                    <input name="userLastName" id="userLastName" placeholder="Doe" type="text">
+
+                    <br>
+
+                    <label for="nameInput">Installation Name:</label>
+                    <input name="nameInput" id="nameInput" placeholder="Installation Name">
+
+                    <label for="colorPicker1">Color Palette:</label>
+                    <input name="colorInput1" id="colorPicker1" class="colorPicker" type="color" vlue="#070309">
+                    <input name="colorInput2" id="colorPicker2" class="colorPicker" type="color" vlue="#070309">
+                    <input name="colorInput3" id="colorPicker3" class="colorPicker" type="color" vlue="#070309">
+                    <input name="colorInput4" id="colorPicker4" class="colorPicker" type="color" vlue="#070309">
+                    <div id="addColorBtn">+</div>
+
+                    <label for="artDescription">
+                        <h2>Installation Description:</h2>
+                        <textarea name="artDescription" id="artDescription" placeholder="Enter a full description of your suggested art installation here:"></textarea>
+                    </label>
+                    
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer></footer>
     
 </body>
 </html>
