@@ -7,14 +7,18 @@
 }
 :root {
     /*color palette from mural image*/
-    --mural-purple: rgb (72, 44, 129);
-    --mural-blue: rgb (94, 160, 218);
-    --mural-plum: rgb (231, 161, 232);
-    --mural-pink: rgb (255, 56, 129);
+    --mural-purple: rgb(72, 44, 129);
+    --mural-blue: rgb(94, 160, 218);
+    --mural-plum: rgb(231, 161, 232);
+    --mural-pink: rgb(255, 56, 129);
 
     /*off white and black*/
-    --black: rgb (7, 3, 9);
-    --white: rgb (255, 247, 245);
+    --black: rgb(7, 3, 9);
+    --white: rgb(255, 247, 245);
+}
+
+html {
+    background-color: var(--white);
 }
 
 
