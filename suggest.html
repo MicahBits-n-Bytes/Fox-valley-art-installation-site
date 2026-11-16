@@ -30,12 +30,22 @@
                     <label for="nameInput">Installation Name:</label>
                     <input name="nameInput" id="nameInput" placeholder="Installation Name">
 
-                    <label for="colorPicker1">Color Palette:</label>
-                    <input name="colorInput1" id="colorPicker1" class="colorPicker" type="color" vlue="#070309">
-                    <input name="colorInput2" id="colorPicker2" class="colorPicker" type="color" vlue="#070309">
-                    <input name="colorInput3" id="colorPicker3" class="colorPicker" type="color" vlue="#070309">
-                    <input name="colorInput4" id="colorPicker4" class="colorPicker" type="color" vlue="#070309">
-                    <div id="addColorBtn">+</div>
+                    <div id="colorPickerBox">
+                        <label for="colorPicker1">Color Palette:</label>
+                        <div id="colorPickerOptions">
+                            <input name="colorInput1" id="colorPicker1" class="colorPicker" type="color" value="#070309">
+                            <input name="colorInput2" id="colorPicker2" class="colorPicker" type="color" value="#070309">
+                            <input name="colorInput3" id="colorPicker3" class="colorPicker" type="color" value="#070309">
+                            <input name="colorInput4" id="colorPicker4" class="colorPicker" type="color" value="#070309">
+                        </div>
+                        <div id="addColorBtn" class="colorBtn">
+                            <p>+</p>
+                        </div>
+
+                        <div id="subColorBtn" class="colorBtn">
+                            <p>-</p>
+                        </div>
+                    </div>
 
                     <label for="artDescription">
                         <h2>Installation Description:</h2>
