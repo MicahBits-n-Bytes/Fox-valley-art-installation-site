@@ -1,3 +1,9 @@
 *{
     box-sizing:border-box;
 }
+
+textarea{
+    display:block;
+    width:80%;
+    height: 20vw;
+}
