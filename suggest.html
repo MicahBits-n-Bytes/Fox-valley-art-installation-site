@@ -40,7 +40,7 @@
                         <div id="subColorBtn" class="colorBtn">
                             <p>-</p>
                         </div>
-                        
+
                         <div id="colorPickerOptions">
                             <input name="colorInput1" id="colorPicker1" class="colorPicker" type="color" value="#070309">
                             <input name="colorInput2" id="colorPicker2" class="colorPicker" type="color" value="#070309">
@@ -54,9 +54,16 @@
                         <h2>Installation Description:</h2>
                         <textarea name="artDescription" id="artDescription" placeholder="Enter a full description of your suggested art installation here:"></textarea>
                     </label>
-                    
+                    <button type="button" id="submitFormBtn" onclick="submitForm()">Submit</button>
                 </fieldset>
             </form>
+        </section>
+
+        <section id="submissionSection">
+            <h3 id="submissionTitle">Thank you for your submission!</h3>
+            <p id="submissionText"></p>
+            <div id="submissionColorPalette"></div>
+            <p id="submissionDescription"></p>
         </section>
     </main>
 

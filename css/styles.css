@@ -63,6 +63,16 @@ Color picker styles
     width:80%;
 }
 
+#submitFormBtn{
+    margin: 2rem;
+    font-size: 1.5rem;
+    background-color:black;
+    color:white;
+    padding: 1rem;
+    border-radius: 20px;
+
+}
+
 /* --------- end color picker styles --------- */
 :root {
     /*color palette from mural image*/
@@ -79,9 +89,6 @@ Color picker styles
 html {
     background-color: var(--white);
 }
-
-
-
 
 
 /*Header and nav styling*/
