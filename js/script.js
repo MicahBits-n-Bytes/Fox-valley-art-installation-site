@@ -40,7 +40,7 @@ function addColor(){
 //removes color input to color picker options on suggest.html with a minimum of 3
 function subColor(){
 
-   if(colorPickerOptions.children.length > 3){
+   if(colorPickerOptions.children.length > 2){
         colorPickerOptions.lastElementChild.remove();
    }
 }
@@ -49,33 +49,40 @@ function subColor(){
 // submit suggestion form functionality
 
 function submitForm(){
-    submitSection.style.display = "block";
 
     const firstName = document.getElementById("userFirstName");
     const lastName = document.getElementById("userLastName");
     const artName = document.getElementById("nameInput");
     const artDescription = document.getElementById("artDescription");
-    //submit text
-    submitText.textContent = `Thank you ${firstName.value} ${lastName.value} for your submission! We will look over your suggestion for your art installation entitled: "${artName.value}" And get back to you shortly! Below we'll have an overview of your submission for your convieneance!`;
 
-    //submission description
+    //if statement checking if name inputs have a value. if not, display alert.
+    if(firstName.value && lastName.value && artName.value && artDescription.value){
+        submitSection.style.display = "block";
+        //submit text
+        submitText.textContent = `Thank you, ${firstName.value} ${lastName.value}, for your submission! We will look over your suggestion for your art installation entitled: "${artName.value}" And get back to you shortly! Below we'll have an overview of your submission for your convieneance!`;
 
-    submitDescription.textContent = artDescription.value;
+        //submission description
+
+        submitDescription.textContent = artDescription.value;
 
 
-    // color palette box
-    colorPaletteBox.replaceChildren();
-    const colorPaletteChoices = Array.from(colorPickerOptions.children);
+        // color palette box
+        colorPaletteBox.replaceChildren();
+        const colorPaletteChoices = Array.from(colorPickerOptions.children);
 
-    colorPaletteChoices.forEach((color) => {
-        console.log(color.value);
+        colorPaletteChoices.forEach((color) => {
+            console.log(color.value);
 
-        const colorChoice = document.createElement("div");
-        const colorChoiceText = document.createElement("h3");
-        colorChoice.style.backgroundColor = color.value;
-        colorChoiceText.textContent = color.value;
+            const colorChoice = document.createElement("div");
+            const colorChoiceText = document.createElement("h3");
+            colorChoice.style.backgroundColor = color.value;
+            colorChoiceText.textContent = color.value;
 
-        colorPaletteBox.append(colorChoice);
-        colorChoice.append(colorChoiceText);
-    });
+            colorPaletteBox.append(colorChoice);
+            colorChoice.append(colorChoiceText);
+        });
+    }
+    else{
+        alert("Please enter information into all required fields to submit.");
+    }
 }

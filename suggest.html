@@ -13,48 +13,67 @@
     <header></header>
     <nav></nav>
 
-    <main>
+    <main id="suggestPage">
+        <section>
+            <h2 class="sectionTitle">Suggest An Installation</h2>
+            <div id="suggestCard">
+                <img id="suggestCardImg" src="img/camera.jpg" alt="">
+                <p id="suggestCardText">Interested in getting involved? Have some cool art installation ideas and just can't wait to share them? Just fill out the form below to share your coolest ideas and have the chance to make them a real-life art installation in the Fox Citites!</p>
+            </div>
+        </section>
         <section>
             <form>
-                <fieldset>
-                    <legend>Suggest An Installation</legend>
+                <fieldset id="suggestForm">
+                    <legend>Suggest An Installation Form</legend>
 
-                    <label for="userFirstName">Your First Name:</label>
-                    <input name="userFirstName" id="userFirstName" placeholder="Jane" type="text">
+                    
 
-                    <label for="userLastName">Your Last Name:</label>
-                    <input name="userLastName" id="userLastName" placeholder="Doe" type="text">
+                    <div id="firstNameBox">
+                        <label for="userFirstName" >Your First Name:</label>
+                        <input name="userFirstName" id="userFirstName" placeholder="Jane" type="text">
+                    </div>
+                    
+                   
 
-                    <br>
+                    <label for="userLastName" id="lastNameBox">
+                        Your Last Name:
+                        <input name="userLastName" id="userLastName" placeholder="Doe" type="text">
+                    </label>
 
-                    <label for="nameInput">Installation Name:</label>
-                    <input name="nameInput" id="nameInput" placeholder="Installation Name">
+                    <label for="nameInput" id="artNameBox">
+                        Installation Name:
+                        <input name="nameInput" id="nameInput" placeholder="Installation Name">
+                    </label>
+                    
 
                     <div id="colorPickerBox">
-                        <label for="colorPicker1">Color Palette:</label>
+                        <label for="colorPicker1" id="colorPaletteLabel">Color Palette:</label>
 
-                        <div id="addColorBtn" class="colorBtn">
-                            <p>+</p>
-                        </div>
+                        <div id="colorBtnBox">
+                            <div id="addColorBtn" class="colorBtn">
+                                <p>+</p>
+                            </div>
 
-                        <div id="subColorBtn" class="colorBtn">
-                            <p>-</p>
+                            <div id="subColorBtn" class="colorBtn">
+                                <p>-</p>
+                            </div>
                         </div>
 
                         <div id="colorPickerOptions">
                             <input name="colorInput1" id="colorPicker1" class="colorPicker" type="color" value="#070309">
                             <input name="colorInput2" id="colorPicker2" class="colorPicker" type="color" value="#070309">
                             <input name="colorInput3" id="colorPicker3" class="colorPicker" type="color" value="#070309">
-                            <input name="colorInput4" id="colorPicker4" class="colorPicker" type="color" value="#070309">
                         </div>
                         
                     </div>
 
-                    <label for="artDescription">
+                    <label for="artDescription" id="descriptionBox">
                         <h2>Installation Description:</h2>
                         <textarea name="artDescription" id="artDescription" placeholder="Enter a full description of your suggested art installation here:"></textarea>
                     </label>
                     <button type="button" id="submitFormBtn" onclick="submitForm()">Submit</button>
+
+                    <p id="suggestReqText">*All Fields Required</p>
                 </fieldset>
             </form>
         </section>

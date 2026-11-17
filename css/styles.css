@@ -1,3 +1,5 @@
+
+
 /*
 ================================
 Color picker styles
@@ -61,6 +63,9 @@ Color picker styles
     grid-auto-columns: max-content;
     grid-auto-flow:column;
     width:80%;
+    justify-self:center;
+    justify-content:center;
+    grid-column:1/-1;
 }
 
 #submitFormBtn{
@@ -70,10 +75,104 @@ Color picker styles
     color:white;
     padding: 1rem;
     border-radius: 20px;
+    width:fit-content;
+    height:fit-content;
+
+    grid-column: 1/-1;
+    justify-self:center;
+
+    transition: all 0.2s ease
 
 }
 
+#submitFormBtn:hover{
+    cursor:pointer;
+    transform:scale(1.2);
+}
+
+#submissionColorPalette{
+    border-radius: 20px;
+    overflow:hidden;
+}
+
+
 /* --------- end color picker styles --------- */
+
+/*
+================================
+submission form styles
+================================
+*/
+
+section{
+    clear:both;
+}
+
+#suggestReqText{
+    color:red;
+    font-size: 1rem;
+    font-style:italic;
+}
+
+.sectionTitle{
+    font-size: clamp(3rem, 6vw, 20rem);
+    color:rgb(232, 232, 232);
+    text-shadow: 0.2vw 0.2vw 0px rgba(0, 0, 0, 0.415);
+    clear:both;
+    text-align:center;
+    margin: clamp(3rem, 5vw, 10vw);
+}
+
+#suggestForm{
+    width: 80%;
+    margin: 5rem auto;
+    font-size:1.5rem;
+}
+
+#suggestForm > *{
+    margin: 1rem;
+}
+
+#suggestCard{
+    display:flow-root;
+    width: 80%;
+    margin: 5rem auto;
+}
+
+#suggestCardImg{
+    width: 40%;
+    float:left;
+    margin: 0px 2rem;
+    border-radius: 20px;
+}
+
+#descriptionBox{
+    grid-column: 1/-1;
+    justify-self:center;
+    width: 80%;
+}
+
+#artDescription{
+    width:100%;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+#suggestPage{
+    font-size: 1.2rem;
+}
+
+#userFirstName, #userLastName, #nameInput{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+
+
+/* --------- end submission form styles --------- */
+
+
 :root {
     /*color palette from mural image*/
     --mural-purple: rgb(72, 44, 129);

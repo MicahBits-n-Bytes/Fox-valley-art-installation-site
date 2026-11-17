@@ -26,24 +26,100 @@ textarea{
     grid-template-rows:100%;
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
-    height: 10vw;
+    height: fit-content;
     width: 80%;
     margin: 3rem auto;
 }
 
 #submissionColorPalette > *{
-    width: 100%;
-    height: 100%;
+   
+    height: fit-content;
     text-align:center;
-
-    margin-bottom: 10rem;
 }
 
 #submissionColorPalette h3{
     color:white;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 80%, 10rem);
 
     margin-top: 5rem;
     margin-bottom: 5px;
+}
+
+#suggestForm{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content:center;
+}
+
+#firstNameBox, #lastNameBox, #artNameBox{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    display:grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 3.5fr;
+    gap: 0.5rem;
+    justify-self:center;
+}
+
+#artNameBox, #suggestReqText{
+    grid-column: 1/-1;
+}
+
+#colorPickerOptions{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-auto-flow:row;
+}
+
+#colorBtnBox{
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#colorPaletteLabel{
+    display:grid;
+    align-items:center;
+}
+
+/*
+================================
+media queries
+================================
+*/
+
+
+/* tablet media query */
+@media (max-width: 900px){
+    #suggestForm{
+        grid-template-columns: 100%;
+        grid-auto-flow: row;
+    }
+
+    #firstNameBox, #lastNameBox, #artNameBox{
+        grid-template-columns:100%;
+        grid-template-rows:repeat(2, 1fr);
+        justify-items:center;
+        justify-self:center;
+    }
+
+    #submissionColorPalette{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-auto-flow:row;
+        grid-auto-rows: 1fr;
+    }
+
+    #artDescription{
+        height: 50vw;
+    }
+}
+
+/* mobile media query */
+@media (max-width: 700px){
+    #artDescription{
+        height: 90vw;
+    }
 }
 
