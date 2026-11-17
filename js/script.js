@@ -57,9 +57,9 @@ function submitForm(){
 
     //if statement checking if name inputs have a value. if not, display alert.
     if(firstName.value && lastName.value && artName.value && artDescription.value){
-        submitSection.style.display = "block";
+        submitSection.style.display = "grid";
         //submit text
-        submitText.textContent = `Thank you, ${firstName.value} ${lastName.value}, for your submission! We will look over your suggestion for your art installation entitled: "${artName.value}" And get back to you shortly! Below we'll have an overview of your submission for your convieneance!`;
+        submitText.textContent = `Thank you, ${firstName.value} ${lastName.value}, for your submission! We will look over your suggestion for your art installation entitled "${artName.value}" and get back to you shortly! Below we'll have an overview of your submission for your convieneance!`;
 
         //submission description
 
