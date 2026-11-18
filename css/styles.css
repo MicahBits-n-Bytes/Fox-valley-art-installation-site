@@ -1,3 +1,17 @@
+/*Variable values*/
+:root {
+    /*color palette from mural image*/
+    --mural-purple: rgb(72, 44, 129);
+    --mural-blue: rgb(94, 160, 218);
+    --mural-plum: rgb(231, 161, 232);
+    --mural-pink: rgb(255, 56, 129);
+
+    /*off white and black*/
+    --black: rgb(13, 11, 12);
+    --white: rgb(255, 247, 245);
+}
+
+
 /*
 ================================
 Color picker styles
@@ -64,27 +78,36 @@ Color picker styles
 }
 
 /* --------- end color picker styles --------- */
-:root {
-    /*color palette from mural image*/
-    --mural-purple: rgb(72, 44, 129);
-    --mural-blue: rgb(94, 160, 218);
-    --mural-plum: rgb(231, 161, 232);
-    --mural-pink: rgb(255, 56, 129);
 
-    /*off white and black*/
-    --black: rgb(7, 3, 9);
-    --white: rgb(255, 247, 245);
-}
+
+
+
 
 html {
     background-color: var(--white);
 }
 
+body {
+    margin: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
 
 
 
 
-/*Header and nav styling*/
+/*
+==========================
+Header and nav styling
+==========================
+*/
+
 header {
     background-image: url(../img/mural.jpg);
     background-repeat: no-repeat;
@@ -105,25 +128,22 @@ nav li {
 nav a {
     text-decoration: none;
 }
-/*END header and nav styling*/
+
+/*---------------END header and nav styling---------------*/
 
 
 
 
 
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
 
 
+/*
+============================
+Images
+============================
+*/
 
-
-
-/*Default image styling.*/
+/*default image styling, resizes large images and centers them*/
 img {
     width: 100%;
     height: auto;
@@ -132,7 +152,7 @@ img {
     margin: 0 auto;
 }
 
-/*Other image styling*/
+/*other image styling*/
 img.gallery-img {
     display: inline-block;
     max-width: 300px;
@@ -147,7 +167,8 @@ img.right {
     max-width: 50%;
     margin: 0 0 0 1rem;
 }
-/*END image styling.*/
+
+/*----------------END image styling.----------------*/
 
 
 
@@ -173,7 +194,15 @@ hr {
 
 
 
-/*footer styling*/
+/*
+================================
+Footer styling
+================================
+*/
+footer {
+    grid-area: footer;
+}
+
 footer li {
     list-style-type: none;
     list-style-image: none;
@@ -188,6 +217,8 @@ footer a {
     --black: rgb(7, 3, 9);
     --white: rgb(255, 247, 245);
 }
+
+/*-----------------END footer styling----------------*/
 
 body {
     font-size: 1em;
