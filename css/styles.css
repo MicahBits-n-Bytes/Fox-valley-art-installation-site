@@ -190,25 +190,113 @@ footer a {
 }
 
 body {
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
+/** index page styling **/
 #slogan {
-    background-image: linear-gradient(rgba(7, 3, 9, 0.786), rgba(231, 161, 232, 0.657), rgba(72, 44, 129, 0.901)),
-    url(../img/slogan.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    text-align: center;
+    padding: 100px 50px;
+}
 
-    height: 200px;
+#slogan h1 {
+    font-size: 3em;
+    color: var(--white);
+    text-shadow: 2px 5px 6px var(--mural-plum);
+    margin-bottom: 20px;
+    font-weight: 800;
+}
 
+#slogan p {
+    font-size: 1.5em;
+    font-style: italic;
+    color: var(--mural-plum);
+    text-shadow: 1px 2px 3px var(--white);
+    font-weight: 500;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+main section {
+    background-color: rgba(72, 44, 129, 0.454);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 50px;
+    box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.547);
+    border: 1px solid var(--white);
+}
+
+main section h2 {
+    font-size: 2em;
+    color: var(--mural-purple);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+main section p {
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+.special-img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px
+}
+
+main section ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+main section ul li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    color: var(--black);
+}
+
+main section ul li::before {
+    content: "✏️";
+    font-weight: bold;
+    font-size: 0.9em;
+    position: absolute;
+    left: 0;
+}
+
+main section div {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    gap: 0.75rem;
 }
 
-#slogan h1{
-    color: var(--white);
-    text-shadow: 2px 3px 6px var(--mural-blue);
+main section div p {
+    font-weight: 600;
+    color: #3b1443;
+    margin-bottom: 0;
+}
+
+.button {
+    display: inline-block;
+    background: linear-gradient(170deg, rgba(59, 89, 136, 0.738) 0%, rgba(164, 192, 233, 0.731) 40%, rgba(1, 81, 184, 0.777) 100%);
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(51, 119, 255, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(2px);
+    box-shadow: 0 6px 20px rgba(0, 128, 255, 0.718);
 }
