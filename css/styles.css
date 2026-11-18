@@ -271,16 +271,16 @@ main section ul li::before {
 }
 
 main section div {
-    margin-top: 2rem;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.75rem;
+    gap: 15px;
 }
 
 main section div p {
     font-weight: 600;
-    color: #3b1443;
+    color: var(--mural-purple);
     margin-bottom: 0;
 }
 
