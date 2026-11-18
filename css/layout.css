@@ -118,6 +118,24 @@ media queries
     #artDescription{
         height: 50vw;
     }
+
+    .colorPicker{
+        width: 10vw !important;
+        height: 10vw !important;
+    }
+
+    .colorBtn{
+        width: 10vw !important;
+        height: 10vw !important;
+    }
+
+    #suggestForm label:has(input:focus:invalid)::before{
+        left:15% !important;
+    }
+
+     #suggestForm label:has(textarea:focus:invalid)::before{
+        left:-5% !important;
+     }
 }
 
 /* mobile media query */

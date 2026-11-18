@@ -17,10 +17,21 @@ const submitDescription = document.getElementById("submissionDescription");
 //color button functionality
 if(addColorBtn){
     addColorBtn.addEventListener("click", addColor);
+    addColorBtn.addEventListener("keydown", (event) => {
+        if(event.key == "Enter"){
+            addColor();
+        }
+    });
 }
 
 if(subColorBtn){
     subColorBtn.addEventListener("click", subColor);
+
+    subColorBtn.addEventListener("keydown", (event) => {
+        if(event.key == "Enter"){
+            subColor();
+        }
+    });
 }
 
 

@@ -27,22 +27,21 @@
                     <legend>Suggest An Installation Form</legend>
 
                     
-
-                    <div id="firstNameBox">
-                        <label for="userFirstName" >Your First Name:</label>
-                        <input name="userFirstName" id="userFirstName" placeholder="Jane" type="text">
-                    </div>
+                    <label for="userFirstName" id="firstNameBox">
+                        Your First Name:
+                        <input name="userFirstName" id="userFirstName" placeholder="Jane" type="text" required>
+                    </label>
                     
                    
 
                     <label for="userLastName" id="lastNameBox">
                         Your Last Name:
-                        <input name="userLastName" id="userLastName" placeholder="Doe" type="text">
+                        <input name="userLastName" id="userLastName" placeholder="Doe" type="text" required>
                     </label>
 
                     <label for="nameInput" id="artNameBox">
                         Installation Name:
-                        <input name="nameInput" id="nameInput" placeholder="Installation Name">
+                        <input name="nameInput" id="nameInput" placeholder="Installation Name" required>
                     </label>
                     
 
@@ -50,11 +49,11 @@
                         <label for="colorPicker1" id="colorPaletteLabel">Color Palette:</label>
 
                         <div id="colorBtnBox">
-                            <div id="addColorBtn" class="colorBtn">
+                            <div id="addColorBtn" class="colorBtn" tabindex="0">
                                 <p>+</p>
                             </div>
 
-                            <div id="subColorBtn" class="colorBtn">
+                            <div id="subColorBtn" class="colorBtn" tabindex="0">
                                 <p>-</p>
                             </div>
                         </div>
@@ -69,8 +68,10 @@
 
                     <label for="artDescription" id="descriptionBox">
                         <h2>Installation Description:</h2>
-                        <textarea name="artDescription" id="artDescription" placeholder="Enter a full description of your suggested art installation here:"></textarea>
+                        <textarea name="artDescription" id="artDescription" placeholder="Enter a full description of your suggested art installation here:" required></textarea>
                     </label>
+
+                    <!-- type button instead of submit to prevent reloading and allow for js functionality. required inputs will not prompt regular pop up. custom pop up created in js -->
                     <button type="button" id="submitFormBtn" onclick="submitForm()">Submit</button>
 
                     <p id="suggestReqText">*All Fields Required</p>
