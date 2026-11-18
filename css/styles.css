@@ -1,16 +1,23 @@
-/*Variable values*/
-:root {
-    /*color palette from mural image*/
-    --mural-purple: rgb(72, 44, 129);
-    --mural-blue: rgb(94, 160, 218);
-    --mural-plum: rgb(231, 161, 232);
-    --mural-pink: rgb(255, 56, 129);
+/*
+================================
+resets
+================================
+*/
 
-    /*off white and black*/
-    --black: rgb(13, 11, 12);
-    --white: rgb(255, 247, 245);
+*{
+    box-sizing:border-box;
+    
+    margin: 0;
+    padding: 0;
 }
 
+body{
+    margin:0;
+    padding:0;
+    font-size:1.2em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height:1.5;
+}
 
 /*
 ================================
@@ -75,39 +82,188 @@ Color picker styles
     grid-auto-columns: max-content;
     grid-auto-flow:column;
     width:80%;
+    justify-self:center;
+    justify-content:center;
+    grid-column:1/-1;
 }
+
+#submitFormBtn{
+    margin: 2rem;
+    font-size: 1.5rem;
+    background-color:black;
+    color:white;
+    padding: 1rem;
+    border-radius: 20px;
+    width:fit-content;
+    height:fit-content;
+
+    grid-column: 1/-1;
+    justify-self:center;
+
+    transition: all 0.2s ease
+
+}
+
+#submitFormBtn:hover{
+    cursor:pointer;
+    transform:scale(1.2);
+}
+
+#submissionColorPalette{
+    border-radius: 20px;
+    overflow:hidden;
+}
+
 
 /* --------- end color picker styles --------- */
 
+/*
+================================
+submission form styles
+================================
+*/
+
+section{
+    clear:both;
+}
+
+#suggestReqText{
+    color:red;
+    font-size: 1rem;
+    font-style:italic;
+}
+
+.sectionTitle{
+    font-size: clamp(3rem, 6vw, 20rem);
+    color:rgb(232, 232, 232);
+    text-shadow: 0.2vw 0.2vw 0px rgba(0, 0, 0, 0.415);
+    clear:both;
+    text-align:center;
+    margin: clamp(3rem, 5vw, 10vw);
+}
+
+#suggestForm{
+    width: 80%;
+    margin: 5rem auto;
+    font-size:1rem;
+}
+
+#suggestForm label{
+    font-size:1.4rem;
+    font-weight:bold;
+    position:relative;
+}
+
+#suggestForm legend{
+    font-weight:bold;
+    font-size: 1.2rem;
+    padding: 1rem;
+    color:#482c81;
+}
+
+#suggestForm > *{
+    margin: 1rem;
+}
+
+#suggestCard{
+    display:flow-root;
+    width: 70%;
+    margin: 5rem auto;
+}
+
+#suggestCardImg{
+    width: clamp(150px, 40%, 1000px);
+    float:left;
+    margin: 0px 2rem;
+    border-radius: 20px;
+}
+
+#descriptionBox{
+    grid-column: 1/-1;
+    justify-self:center;
+    width: 80%;
+}
+
+#artDescription{
+    width:100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+#submissionDescription{
+    font-size: 1.2rem;
+}
+
+#suggestPage{
+    font-size: 1rem;
+}
+
+#userFirstName, #userLastName, #nameInput{
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    height:fit-content;
+    align-self:center;
+}
+
+#submissionDescription::before{
+    content: '"';
+    font-size:clamp(2rem, 5vw, 10rem);
+    font-family:'Times New Roman', Times, serif;
+    color:#482c81;
+}
+
+#submissionDescription::after{
+    content: '"';
+    font-size:clamp(2rem, 2vw, 10rem);
+    font-family:'Times New Roman', Times, serif;
+    color:#482c81;
+}
 
 
+.submissionTitle{
+    font-size:clamp(1.5rem, 2vw, 10rem);
+    text-align:center;
+}
 
+#suggestForm input:focus, #suggestForm textarea:focus, .colorBtn:focus{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37);
+}
+
+#suggestForm input[type="color"]:focus, .colorBtn:focus{
+    outline: 2px solid #FF3881;
+}
+
+#suggestForm label:has(input:focus:invalid)::before, #suggestForm label:has(textarea:focus:invalid)::before{
+    content:'*';
+    color:red;
+    position:absolute;
+    left:-3%;
+}
+
+
+/* --------- end submission form styles --------- */
+
+
+:root {
+    /*color palette from mural image*/
+    --mural-purple: rgb(72, 44, 129);
+    --mural-blue: rgb(94, 160, 218);
+    --mural-plum: rgb(231, 161, 232);
+    --mural-pink: rgb(255, 56, 129);
+
+    /*off white and black*/
+    --black: rgb(7, 3, 9);
+    --white: rgb(255, 247, 245);
+}
 
 html {
     background-color: var(--white);
 }
 
-body {
-    margin: 0;
-}
 
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-
-
-
-
-/*
-==========================
-Header and nav styling
-==========================
-*/
-
+/*Header and nav styling*/
 header {
     background-image: url(../img/mural.jpg);
     background-repeat: no-repeat;
@@ -221,25 +377,113 @@ footer a {
 /*-----------------END footer styling----------------*/
 
 body {
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
+/** index page styling **/
 #slogan {
-    background-image: linear-gradient(rgba(7, 3, 9, 0.786), rgba(231, 161, 232, 0.657), rgba(72, 44, 129, 0.901)),
-    url(../img/slogan.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    text-align: center;
+    padding: 100px 50px;
+}
 
-    height: 200px;
+#slogan h1 {
+    font-size: 3em;
+    color: var(--white);
+    text-shadow: 2px 5px 6px var(--mural-plum);
+    margin-bottom: 20px;
+    font-weight: 800;
+}
 
+#slogan p {
+    font-size: 1.5em;
+    font-style: italic;
+    color: var(--mural-plum);
+    text-shadow: 1px 2px 3px var(--white);
+    font-weight: 500;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+main section {
+    background-color: rgba(72, 44, 129, 0.454);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 50px;
+    box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.547);
+    border: 1px solid var(--white);
+}
+
+main section h2 {
+    font-size: 2em;
+    color: var(--mural-purple);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+main section p {
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+.special-img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px
+}
+
+main section ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+main section ul li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    color: var(--black);
+}
+
+main section ul li::before {
+    content: "✏️";
+    font-weight: bold;
+    font-size: 0.9em;
+    position: absolute;
+    left: 0;
+}
+
+main section div {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    gap: 15px;
 }
 
-#slogan h1{
-    color: var(--white);
-    text-shadow: 2px 3px 6px var(--mural-blue);
+main section div p {
+    font-weight: 600;
+    color: var(--mural-purple);
+    margin-bottom: 0;
+}
+
+.button {
+    display: inline-block;
+    background: linear-gradient(170deg, rgba(59, 89, 136, 0.738) 0%, rgba(164, 192, 233, 0.731) 40%, rgba(1, 81, 184, 0.777) 100%);
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(51, 119, 255, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(2px);
+    box-shadow: 0 6px 20px rgba(0, 128, 255, 0.718);
 }
