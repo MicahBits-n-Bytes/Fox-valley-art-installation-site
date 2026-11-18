@@ -1,5 +1,26 @@
 /*
 ================================
+resets
+================================
+*/
+
+*{
+    box-sizing:border-box;
+    
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-size:1.2em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height:1.5;
+}
+
+/*
+================================
 Color picker styles
 ================================
 */
@@ -61,9 +82,170 @@ Color picker styles
     grid-auto-columns: max-content;
     grid-auto-flow:column;
     width:80%;
+    justify-self:center;
+    justify-content:center;
+    grid-column:1/-1;
 }
 
+#submitFormBtn{
+    margin: 2rem;
+    font-size: 1.5rem;
+    background-color:black;
+    color:white;
+    padding: 1rem;
+    border-radius: 20px;
+    width:fit-content;
+    height:fit-content;
+
+    grid-column: 1/-1;
+    justify-self:center;
+
+    transition: all 0.2s ease
+
+}
+
+#submitFormBtn:hover{
+    cursor:pointer;
+    transform:scale(1.2);
+}
+
+#submissionColorPalette{
+    border-radius: 20px;
+    overflow:hidden;
+}
+
+
 /* --------- end color picker styles --------- */
+
+/*
+================================
+submission form styles
+================================
+*/
+
+section{
+    clear:both;
+}
+
+#suggestReqText{
+    color:red;
+    font-size: 1rem;
+    font-style:italic;
+}
+
+.sectionTitle{
+    font-size: clamp(3rem, 6vw, 20rem);
+    color:rgb(232, 232, 232);
+    text-shadow: 0.2vw 0.2vw 0px rgba(0, 0, 0, 0.415);
+    clear:both;
+    text-align:center;
+    margin: clamp(3rem, 5vw, 10vw);
+}
+
+#suggestForm{
+    width: 80%;
+    margin: 5rem auto;
+    font-size:1rem;
+}
+
+#suggestForm label{
+    font-size:1.4rem;
+    font-weight:bold;
+    position:relative;
+}
+
+#suggestForm legend{
+    font-weight:bold;
+    font-size: 1.2rem;
+    padding: 1rem;
+    color:#482c81;
+}
+
+#suggestForm > *{
+    margin: 1rem;
+}
+
+#suggestCard{
+    display:flow-root;
+    width: 70%;
+    margin: 5rem auto;
+}
+
+#suggestCardImg{
+    width: clamp(150px, 40%, 1000px);
+    float:left;
+    margin: 0px 2rem;
+    border-radius: 20px;
+}
+
+#descriptionBox{
+    grid-column: 1/-1;
+    justify-self:center;
+    width: 80%;
+}
+
+#artDescription{
+    width:100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+#submissionDescription{
+    font-size: 1.2rem;
+}
+
+#suggestPage{
+    font-size: 1rem;
+}
+
+#userFirstName, #userLastName, #nameInput{
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    height:fit-content;
+    align-self:center;
+}
+
+#submissionDescription::before{
+    content: '"';
+    font-size:clamp(2rem, 5vw, 10rem);
+    font-family:'Times New Roman', Times, serif;
+    color:#482c81;
+}
+
+#submissionDescription::after{
+    content: '"';
+    font-size:clamp(2rem, 2vw, 10rem);
+    font-family:'Times New Roman', Times, serif;
+    color:#482c81;
+}
+
+
+.submissionTitle{
+    font-size:clamp(1.5rem, 2vw, 10rem);
+    text-align:center;
+}
+
+#suggestForm input:focus, #suggestForm textarea:focus, .colorBtn:focus{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37);
+}
+
+#suggestForm input[type="color"]:focus, .colorBtn:focus{
+    outline: 2px solid #FF3881;
+}
+
+#suggestForm label:has(input:focus:invalid)::before, #suggestForm label:has(textarea:focus:invalid)::before{
+    content:'*';
+    color:red;
+    position:absolute;
+    left:-3%;
+}
+
+
+/* --------- end submission form styles --------- */
+
+
 :root {
     /*color palette from mural image*/
     --mural-purple: rgb(72, 44, 129);
@@ -79,9 +261,6 @@ Color picker styles
 html {
     background-color: var(--white);
 }
-
-
-
 
 
 /*Header and nav styling*/
