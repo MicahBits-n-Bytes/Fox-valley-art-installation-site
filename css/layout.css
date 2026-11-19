@@ -136,6 +136,13 @@ media queries
      #suggestForm label:has(textarea:focus:invalid)::before{
         left:-5% !important;
      }
+    main .split {
+        grid-template-columns: 1fr;
+     }
+    main .grid-4 {
+        grid-template-columns: repeat(2,1fr);
+     }
+
 }
 
 /* mobile media query */
@@ -143,5 +150,11 @@ media queries
     #artDescription{
         height: 90vw;
     }
+    main .split {
+        grid-template-columns: 1fr;
+     }
+    main .grid-4 {
+        grid-template-columns: 1fr;
+     }
 }
 
