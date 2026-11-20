@@ -415,7 +415,7 @@ main section {
 }
 
 main section h2 {
-    font-size: 2em;
+    font-size: 1.6em;
     color: var(--mural-purple);
     margin-bottom: 20px;
     font-weight: 700;
@@ -432,30 +432,37 @@ main section p {
     object-fit: cover;
     aspect-ratio: 4/3;
     border-radius: 58% 42% 55% 45% / 52% 58% 42% 48%;
+    border: 3px dotted var(--white);
     margin-bottom: 20px;
-    background-color: var(--mural-blue);
 }
 
-main section ul {
-    list-style-type: none;
-    margin-top: 20px;
+.scrolling {
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  padding-bottom:20px;
 }
-
-main section ul li {
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 15px;
-    color: var(--black);
+.scroller-card {
+  position:relative;
+  flex:0 0 min(80%,350px);
+  margin:0;
+  border-radius: 10px;
+  overflow:hidden
 }
-
-main section ul li::before {
-    content: "✏️";
-    font-weight: bold;
-    font-size: 0.9em;
-    position: absolute;
-    left: 0;
+.scroller-card img {
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover
 }
-
+.scroller-card figcaption{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;  
+  padding:10px;
+  background:#482c816e;
+  color: white;
+}
 .button-grp {
     margin-top: 20px;
     display: flex;
