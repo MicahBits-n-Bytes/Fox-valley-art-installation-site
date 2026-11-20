@@ -399,13 +399,13 @@ body {
     font-weight: 500;
 }
 
-main {
+#homepage {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 30px;
 }
 
-main section {
+#homepage section {
     background-color: rgba(72, 44, 129, 0.454);
     border-radius: 20px;
     padding: 30px;
@@ -414,14 +414,14 @@ main section {
     border: 1px solid var(--white);
 }
 
-main section h2 {
+#homepage section h2 {
     font-size: 1.6em;
     color: var(--mural-purple);
     margin-bottom: 20px;
     font-weight: 700;
 }
 
-main section p {
+#homepage section p {
     color: var(--white);
     margin-bottom: 30px;
 }

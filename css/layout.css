@@ -136,10 +136,10 @@ media queries
      #suggestForm label:has(textarea:focus:invalid)::before{
         left:-5% !important;
      }
-    main .split {
+    #homepage .split {
         grid-template-columns: 1fr;
      }
-    main .grid-4 {
+    #homepage .grid-4 {
         grid-template-columns: repeat(2,1fr);
      }
      header #slogan h1 {
@@ -156,10 +156,10 @@ media queries
     #artDescription{
         height: 90vw;
     }
-    main .split {
+    #homepage .split {
         grid-template-columns: 1fr;
      }
-    main .grid-4 {
+    #homepage .grid-4 {
         grid-template-columns: 1fr;
      }
      header #slogan h1 {
