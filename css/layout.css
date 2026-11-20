@@ -148,6 +148,9 @@ media queries
      header #slogan p {
         font-size: 1.2em;
      }
+     #homepage .grid-2 {
+        grid-template-columns: 1fr;
+     }
 
 }
 
@@ -167,6 +170,9 @@ media queries
      }
      header #slogan p {
         font-size: 1.2em;
+     }
+     #homepage .grid-2 {
+        grid-template-columns: 1fr;
      }
 }
 

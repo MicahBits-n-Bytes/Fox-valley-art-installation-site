@@ -520,3 +520,12 @@ body {
     font-size: 1.05em;
     margin: 15px 20px;
 }
+#homepage .card p {
+    color: var(--black);
+    padding: 10px 20px;
+}
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+}
