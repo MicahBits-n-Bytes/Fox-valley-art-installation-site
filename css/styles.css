@@ -51,7 +51,6 @@ Color picker styles
     text-align:center;
     font-size: 1.2rem;
     font-weight:bolder;
-    outline: 2px solid red;
 }
 
 .colorPicker{
@@ -193,6 +192,7 @@ section{
     width:100%;
     padding: 1rem;
     font-size: 1.1rem;
+    overflow-wrap: break-word;
 }
 
 #submissionDescription{
