@@ -19,6 +19,29 @@ body{
     line-height:1.5;
 }
 
+html {
+    background-color: var(--white);
+}
+
+/*
+===========================================
+Variables
+===========================================
+*/
+:root {
+    /*color palette from mural image*/
+    --mural-purple: rgb(72, 44, 129);
+    --mural-blue: rgb(94, 160, 218);
+    --mural-plum: rgb(231, 161, 232);
+    --mural-pink: rgb(255, 56, 129);
+
+    /*off white and black*/
+    --black: rgb(7, 3, 9);
+    --white: rgb(255, 247, 245);
+}
+
+
+
 /*
 ================================
 Color picker styles
@@ -251,33 +274,36 @@ section{
 /* --------- end submission form styles --------- */
 
 
-:root {
-    /*color palette from mural image*/
-    --mural-purple: rgb(72, 44, 129);
-    --mural-blue: rgb(94, 160, 218);
-    --mural-plum: rgb(231, 161, 232);
-    --mural-pink: rgb(255, 56, 129);
 
-    /*off white and black*/
-    --black: rgb(7, 3, 9);
-    --white: rgb(255, 247, 245);
-}
-
-html {
-    background-color: var(--white);
-}
-
-
-/*Header and nav styling*/
+/*
+===============================
+Header and nav styling
+===============================
+*/
 header {
     background-image: url(../img/mural.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 170%;
+    background-size: 100% auto;
+    background-position: center center;
     background-attachment: fixed;
 
     width: 100%;
-    height: 300px;
+    min-height: 300px;
+}
+
+/*Media queries to keep header image looking nice at all sizes*/
+@media (max-width: 1575px) {
+    header {
+        background-position: center top;
+    }
+}
+
+@media (max-width: 610px) {
+    header {
+        background-image: url(../img/mural-small.jpg);
+        background-position: left top;
+        background-size: cover;
+    }
 }
 
 nav li {
@@ -291,13 +317,11 @@ nav a {
 }
 
 /*---------------END header and nav styling---------------*/
+
+
+
 body {
     width: 100%;
-}
-
-main.center {
-    margin: 0 auto;
-    width: 75%;
 }
 
 
