@@ -1,4 +1,14 @@
+:root {
+    /*color palette from mural image*/
+    --mural-purple: rgb(72, 44, 129);
+    --mural-blue: rgb(94, 160, 218);
+    --mural-plum: rgb(231, 161, 232);
+    --mural-pink: rgb(255, 56, 129);
 
+    /*off white and black*/
+    --black: rgb(7, 3, 9);
+    --white: rgb(255, 247, 245);
+}
 
 textarea{
     display:block;
@@ -87,6 +97,22 @@ textarea{
     align-items:center;
 }
 
+
+
+#toggle {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.hamburger-icon {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
 /*
 ================================
 media queries
@@ -96,6 +122,57 @@ media queries
 
 /* tablet media query */
 @media (max-width: 900px){
+    /*Mobile drop-down menu*/
+
+    .drop-menu {
+        position: fixed;
+        top: 32px;
+        right: 16px;
+    }
+
+    .hamburger {
+        position: absolute;
+        right: 0;
+    }
+
+    .menu-button {
+        display: block;
+        background-color: var(--white);
+    }
+
+    .menu-list {
+        text-align: right;
+        position: absolute;
+
+        right: 14px;
+        top: 75px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        background: var(--mural-blue);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.38s ease, opacity 0.25s ease;
+    }
+
+    #toggle:checked ~ .menu {
+        max-height: 100vh;
+        opacity: 1;
+    }
+
+    .hamburger-icon {
+        opacity: 1;
+        height: 70px;
+        width: auto;
+    }
+
+    /*---END drop-down menu---*/
+
+
+
     #suggestForm{
         grid-template-columns: 100%;
         grid-auto-flow: row;
@@ -151,7 +228,6 @@ media queries
      #homepage .grid-2 {
         grid-template-columns: 1fr;
      }
-
 }
 
 /* mobile media query */

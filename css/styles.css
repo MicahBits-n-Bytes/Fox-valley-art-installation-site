@@ -291,11 +291,14 @@ nav a {
 }
 
 /*---------------END header and nav styling---------------*/
+body {
+    width: 100%;
+}
 
-
-
-
-
+main.center {
+    margin: 0 auto;
+    width: 75%;
+}
 
 
 /*
@@ -361,7 +364,22 @@ Footer styling
 ================================
 */
 footer {
+    background-color: var(--mural-purple);
     grid-area: footer;
+    width: 100%;
+    min-height: 140px;
+
+    margin: 5rem 0 0;
+    padding: 1rem;
+}
+
+.footer-column-wrap {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.footer-column {
+    display: inline-block;
 }
 
 footer li {
@@ -375,8 +393,7 @@ footer a {
 
 #copyright {
     float: right;
-    --black: rgb(7, 3, 9);
-    --white: rgb(255, 247, 245);
+    margin-right: 2rem;
 }
 
 /*-----------------END footer styling----------------*/
