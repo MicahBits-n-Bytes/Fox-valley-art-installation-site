@@ -253,6 +253,10 @@ media queries
     }
 }
 
+.menu, .drop-menu{
+    z-index: 900;
+}
+
 /* mobile media query */
 @media (max-width: 700px){
     #artDescription{
