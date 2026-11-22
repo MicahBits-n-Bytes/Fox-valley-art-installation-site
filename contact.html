@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="img/color palette icon.png">
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -34,9 +35,9 @@
     </div>
 
     <main>
-        <h1>Contact</h1>
+        <h1 class="sectionTitle">Contact</h1>
 
-        <section>
+        <section id="contactForm">
             <div>
                 <span class="contact"><strong>Phone:</strong> (920)111-1111</span>
                 <br/>
@@ -47,13 +48,19 @@
 
             <div>
                 <label for="name">Name:</label><br />
-                <input type="text" id="name" name="name"><br />
+                <input type="text" id="nameInput" name="name" value=""><br />
 
                 <label for="email">Email Address:</label><br />
-                <input type="text" id="email" name="email"><br />
+                <input type="text" id="emailInput" name="email" value=""><br />
 
                 <label for="message">Message:</label><br />
-                <input type="text" id="message" name="message">
+                <textarea id="messageInput" name="message" placeholder="Enter message here..." value=""></textarea>
+                <br>
+
+                <button class="button" id="contactSubmitBtn" onclick="submitContact()" type="button">Submit Form</button>
+            </div>
+
+            <div id="contactOutputBox">
             </div>
         </section>
     </main>

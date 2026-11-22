@@ -10,7 +10,36 @@ const submitText = document.getElementById("submissionText");
 const colorPaletteBox = document.getElementById("submissionColorPalette");
 const submitDescription = document.getElementById("submissionDescription");
 
+//contact constants
+const submitContactBtn = document.getElementById("contactSubmitBtn");
 
+const contactOutputBox = document.getElementById("contactOutputBox");
+
+//preventing default submit behavior
+document.addEventListener("submit", (event) =>{
+    event.preventDefault
+});
+
+
+function submitContact(){
+
+    const contactName = document.getElementById("nameInput");
+    const contactEmail = document.getElementById("emailInput");
+    const contactMessage = document.getElementById("messageInput");
+
+    const contactMessageOutput = document.createElement('p');
+    
+    if(contactName.value != "" && contactEmail.value != "" && contactMessage.value != ""){
+        console.log("all items present");
+
+        contactMessageOutput.textContent = `Thank you, ${contactName.value}, for your contact request! an email with your message has been sent from "${contactEmail.value}" to our contact specialist with the following message: "${contactMessage.value}". Thank you again and we will reach back out to you shortly!`;
+
+        contactOutputBox.appendChild(contactMessageOutput);
+    }
+    else{
+        alert("Please enter information into all required fields to submit.");
+    }
+}
 
 
 
