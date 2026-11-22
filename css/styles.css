@@ -530,45 +530,45 @@ body {
 }
 
 #homepage {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 40px 25px 30px;
 }
 
-#homepage section {
-    background-color: rgba(72, 44, 129, 0.454);
-    border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 50px;
-    box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.547);
-    border: 1px solid var(--white);
-}
-
-#homepage section h2 {
+#homepage h2 {
     font-size: 1.6em;
     color: var(--mural-purple);
+    margin-bottom: 15px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+#homepage p {
+    color: var(--black);
     margin-bottom: 20px;
+    line-height: 1.5;
+}
+.welcome {
+    color: var(--mural-pink);
     font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px;
+    text-decoration: underline;
 }
-
-#homepage section p {
-    color: var(--white);
-    margin-bottom: 30px;
-}
-
 .special-img {
-    width: 100%;
+    max-width: 100%;
     max-height: 350px;
     object-fit: cover;
     aspect-ratio: 4/3;
     border-radius: 58% 42% 55% 45% / 52% 58% 42% 48%;
-    border: 3px dotted var(--white);
+    box-shadow: 2px 5px 20px var(--black);
     margin-bottom: 20px;
 }
 
 .scrolling {
   display:flex;
-  gap:10px;
+  gap: 30px;
   overflow-x:auto;
   padding-bottom:20px;
 }
@@ -577,7 +577,8 @@ body {
   flex:0 0 min(80%,350px);
   margin:0;
   border-radius: 10px;
-  overflow:hidden
+  overflow:hidden;
+  box-shadow: 2px 5px 20px var(--black);
 }
 .scroller-card img {
   width:100%;
@@ -597,19 +598,18 @@ body {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 15px;
 }
 
 .button-grp p {
     font-weight: 600;
     color: var(--mural-purple);
-    margin-bottom: 0;
 }
-
 .button {
     display: inline-block;
-    background: linear-gradient(170deg, rgba(59, 89, 136, 0.738) 0%, rgba(164, 192, 233, 0.731) 40%, rgba(1, 81, 184, 0.777) 100%);
+    background: linear-gradient(170deg, rgba(55, 93, 153, 0.738) 0%, rgba(207, 226, 255, 0.731) 40%, rgba(0, 110, 255, 0.777) 100%);
     color: #ffffff;
     padding: 15px 20px;
     border-radius: 50px;
@@ -627,40 +627,79 @@ body {
 .split {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 30px;
+    gap: 60px;
     align-items: center;
 }
-
-.grid-4 {
+.split > .button-grp {
+    grid-column: 1 / -1;
+}
+.background {
+    text-align: center;
+    margin: 50px 0;
+    background: linear-gradient(175deg, var(--mural-plum), var(--mural-blue), var(--mural-purple));
+    padding: 45px 40px;
+    border-radius: 60px;
+}
+.grid-3 {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 15px;
 }
+.place {
+    background: linear-gradient(135deg, var(--mural-pink), var(--mural-plum), var(--mural-blue), var(--mural-purple));
+    border-radius: 40px;
+    padding: 64px 32px;
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+.place p {
+    max-width: 620px;
+    margin: 0 auto 16px;
+}
+
+.place .button-grp {
+    align-items: center;
+}
 .card {
+    overflow: hidden;
     background-color: var(--white);
-    border-radius: 16px;
+    border-radius: 15px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .card img {
+    display: block;
+    max-width: 100%;
     aspect-ratio: 3/2;
     object-fit: cover;
-    border-radius: 10px;
+}
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(72, 44, 129, 0.24);
 }
 .card h3 {
     color: var(--black);
     font-size: 1.05em;
-    margin: 15px 20px;
+    margin: 15px 20px 10px;
 }
 #homepage .card p {
     color: var(--black);
-    padding: 10px 20px;
+    padding: 0 20px;
 }
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 40px;
 }
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
 .card.value {
     text-align: center;
+    background: linear-gradient(195deg, var(--mural-blue), var(--white), var(--mural-blue));
+    
 }
 
 .card .icon {
@@ -674,4 +713,15 @@ body {
     border-radius: 100px;
     aspect-ratio: 1;
     object-fit: cover;
+}
+.team-member {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 14px 30px rgba(72, 44, 129, 0.24);
+}
+section {
+    padding: 15px;
+    margin: 30px 0;
 }
