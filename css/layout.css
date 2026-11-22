@@ -216,7 +216,7 @@ media queries
     #homepage .split {
         grid-template-columns: 1fr;
      }
-    #homepage .grid-4 {
+    #homepage .grid-3 {
         grid-template-columns: repeat(2,1fr);
      }
      header #slogan h1 {
@@ -225,8 +225,14 @@ media queries
      header #slogan p {
         font-size: 1.2em;
      }
-     #homepage .grid-2 {
+    #homepage .split {
         grid-template-columns: 1fr;
+     }
+    #homepage .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+     }
+     .welcome {
+        text-align: center;
      }
 }
 
@@ -238,7 +244,7 @@ media queries
     #homepage .split {
         grid-template-columns: 1fr;
      }
-    #homepage .grid-4 {
+    #homepage .grid-3, .grid-2 {
         grid-template-columns: 1fr;
      }
      header #slogan h1 {
@@ -247,8 +253,8 @@ media queries
      header #slogan p {
         font-size: 1.2em;
      }
-     #homepage .grid-2 {
-        grid-template-columns: 1fr;
+     .welcome {
+        text-align: center;
      }
 }
 
