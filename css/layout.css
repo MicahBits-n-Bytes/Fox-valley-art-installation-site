@@ -241,7 +241,7 @@ media queries
      #homepage .grid-4 {
         grid-template-columns: 1fr 1fr;
      }
-     }
+     
 
     .footer-column-wrap {
         grid-template-columns: 1, 1fr;
