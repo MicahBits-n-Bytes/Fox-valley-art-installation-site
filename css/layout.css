@@ -234,6 +234,9 @@ media queries
      .welcome {
         text-align: center;
      }
+     #homepage .grid-4 {
+        grid-template-columns: 1fr 1fr;
+     }
 }
 
 /* mobile media query */
@@ -255,6 +258,9 @@ media queries
      }
      .welcome {
         text-align: center;
+     }
+     #homepage .grid-4 {
+        grid-template-columns: 1fr;
      }
 }
 
