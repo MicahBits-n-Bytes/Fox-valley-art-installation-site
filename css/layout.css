@@ -122,8 +122,8 @@ media queries
 
 /* tablet media query */
 @media (max-width: 900px){
-    /*Mobile drop-down menu*/
 
+    /*Mobile drop-down menu*/
     .drop-menu {
         position: fixed;
         top: 32px;
@@ -133,22 +133,16 @@ media queries
     .hamburger {
         position: absolute;
         right: 0;
+        cursor: pointer;
     }
 
     .menu-button {
         display: block;
         background-color: var(--white);
+        margin-top: 1rem;
     }
 
-    .menu-list {
-        text-align: right;
-        position: absolute;
-
-        right: 14px;
-        top: 75px;
-    }
-
-    .menu {
+    nav.menu {
         display: flex;
         flex-direction: column;
         background: var(--mural-blue);
@@ -156,6 +150,16 @@ media queries
         overflow: hidden;
         opacity: 0;
         transition: max-height 0.38s ease, opacity 0.25s ease;
+        width: min-content;
+    }
+
+      ul.menu-list {
+        display: block;
+        text-align: right;
+        position: absolute;
+
+        right: 14px;
+        top: 75px;
     }
 
     #toggle:checked ~ .menu {
@@ -165,7 +169,7 @@ media queries
 
     .hamburger-icon {
         opacity: 1;
-        height: 70px;
+        height: 80px;
         width: auto;
     }
 
@@ -228,6 +232,16 @@ media queries
      #homepage .grid-2 {
         grid-template-columns: 1fr;
      }
+
+    .footer-column-wrap {
+        grid-template-columns: 1, 1fr;
+        max-width: 200px;
+        padding-bottom: 1rem;
+    }
+
+    #copyright {
+        margin-right: 0.5rem;
+    }
 }
 
 /* mobile media query */
